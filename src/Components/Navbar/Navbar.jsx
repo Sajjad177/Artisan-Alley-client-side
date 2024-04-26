@@ -1,11 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
 
 
 const Navbar = () => {
 
     const [dropDownState, setDropDownState] = useState(false);
     const dropDownMenuRef = useRef();
+
+    const {user, logOut} = useAuth()
+    
+    const handelLogOut = (e) => {
+        e.preventDefault()
+        console.log('click')
+        logOut()
+            .then(() => {
+                Swal.fire("logout successfully");
+            })
+            .catch()
+    }
 
     useEffect(() => {
         const closeDropDown = (e) => {
@@ -24,7 +38,7 @@ const Navbar = () => {
         <div> 
                <nav className="flex items-center justify-between bg-[#393E46] px-4 py-2 text-white mb-10">
                     <div className="scale-100 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold text-white transition-all duration-200 hover:scale-110">
-                    <h2>Logo</h2>
+                    <h2>Artisan Alley</h2>
                     </div>
                     <ul className="hidden items-center justify-between gap-10 md:flex">
                     <NavLink to='/'>
@@ -47,11 +61,27 @@ const Navbar = () => {
                         My Art&Craft List<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
                         </li>
                     </NavLink>
+                    {
+                       user  ? 
+                       <div className="flex items-center gap-2">
+                            <div>
+                                <div tabIndex={0} role="button" className="tooltip tooltip-bottom" data-tip ={`${user.displayName}`}>
+                                    <img className="size-[70px] bg-slate-500 object-cover rounded-full" src={`${user?.photoURL}`} alt="avatar navigate ui" />
+                                </div>
+                            </div>
+                            <li onClick={handelLogOut} className="group flex  cursor-pointer flex-col">
+                                logOut
+                            <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+                            </li>
+                       </div>
+                        :
                     <NavLink to='/login'>
                         <li className="group flex  cursor-pointer flex-col">
-                        Login<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+                        Login
+                        <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
                         </li>
                     </NavLink>
+                    }
                     </ul>
                     <div ref={dropDownMenuRef} onClick={() => setDropDownState(!dropDownState)} className="relative flex transition-transform md:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cursor-pointer" > <line x1="4" x2="20" y1="12" y2="12" /> <line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /> </svg>

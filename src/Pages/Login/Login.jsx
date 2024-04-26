@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 
 const Login = () => {
 
-    const {loginUser, googleLogin } = useAuth()
+    const {loginUser, googleLogin, gitHubLogin } = useAuth()
 
     const handelLogin = (e) => {
         e.preventDefault()
@@ -57,8 +57,8 @@ const Login = () => {
                         <div className="absolute -right-7 top-[50%] h-14 w-14 -translate-y-1/2 rounded-full bg-gradient-to-br from-white via-[#9eb6f8] to-[#6585dd] transition-all"></div>
                         <div className="absolute left-[50%] top-[22%] h-24 w-24 -translate-x-1/2 rounded-full  bg-gradient-to-br from-white via-[#9eb6f8] to-[#6585dd]"></div>
                         <div className="space-y-2 text-center">
-                            <h2 className="text-3xl font-medium text-white/80 ">Welcome Back</h2>
-                            <p className="animate-pulse text-sm text-white/60">Please Enter You Information</p>
+                            <h2 className="text-4xl font-medium text-white/80 ">Welcome Back</h2>
+                            <p className="animate-pulse text-lg text-white/60">Please Enter You Information</p>
                         </div>
                     </div>
                     {/* input side  */}
@@ -83,10 +83,14 @@ const Login = () => {
                         </div>
                         <div className="flex items-center justify-center gap-10 mb-10">
                             <button className="py-1 px-1 rounded-full border-2">
-                                <FcGoogle onClick={() => googleLogin()} className="text-4xl"></FcGoogle>
+                                <span>
+                                    <FcGoogle onClick={() => googleLogin()} className="text-4xl"></FcGoogle>
+                                </span>
                             </button>
                             <button className="py-1 px-1 rounded-full border-2">
-                                <FaGithub className="text-4xl"></FaGithub>
+                                <span>
+                                    <FaGithub onClick={() => gitHubLogin()} className="text-4xl"></FaGithub>
+                                </span>
                             </button>
                         </div>
                     </div>
