@@ -54,6 +54,10 @@ const AddCraftItem = () => {
                                 <option> Select Category</option>
                                 <option value='Landscape_Painting'>Landscape Painting</option>
                                 <option value='Portrait_Drawing'>Portrait Drawing</option>
+                                <option value='WaterColor_Painting:'>WaterColor Painting</option>
+                                <option value='Oil_Painting'>Oil Painting</option>
+                                <option value='Charcoal_Sketching'>Charcoal Sketching</option>
+                                <option value=' Cartoon_Drawing'> Cartoon Drawing</option>
                             </select>
                             <label className="mb-2 block font-semibold">Customization</label>
                             <select name="customization" id="" className="w-full p-2 border rounded-md focus:outline-blue-400" type='text' placeholder='select category'>
@@ -63,7 +67,7 @@ const AddCraftItem = () => {
                             </select>
                             <label className="mb-2 block font-semibold">Stock Status</label>
                             <select name="stockStatus" id="" className="w-full p-2 border rounded-md focus:outline-blue-400" type='text' placeholder='Stock Status'>
-                                <option >Select Status</option>
+                                <option>Stock Status</option>
                                 <option value='In stock'>In stock</option>
                                 <option value='Made to order'>Made to order</option>
                             </select>
