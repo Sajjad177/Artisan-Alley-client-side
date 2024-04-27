@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const CraftItemCard = ({item}) => {
-    console.log('from card', item)
+    // console.log('from card', item)
     const {itemName, photo} = item
     return (
         <div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const useArtAndCraft = () => {
     const [isLoading, setLoading] = useState(false)
-    const [items, setItems] = useState()
+    const [items, setItems] = useState([])
     const [toggle, setToggle] = useState(false)
 
     const refetch = () => {

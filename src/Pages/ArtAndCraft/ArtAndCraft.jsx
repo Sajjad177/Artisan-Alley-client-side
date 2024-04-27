@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-// import AllArtAndCraftCard from "../../Components/AllArtAndCraftCard/AllArtAndCraftCard";
 import useArtAndCraft from "../../Hooks/useArtAndCraft";
 
 
