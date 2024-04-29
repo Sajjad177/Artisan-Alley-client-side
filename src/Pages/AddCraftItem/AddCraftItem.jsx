@@ -56,7 +56,7 @@ const AddCraftItem = () => {
                     <div className="flex gap-8">
                         <div className="flex-1 space-y-3">
                             <label className="mb-2 block font-semibold"> Name</label>
-                            <input type="text" placeholder="enter name" id="name" name="name" defaultValue={user?.displayName} className="w-full p-2 border rounded-md focus:outline-blue-400" />
+                            <input type="text" placeholder="enter name" id="name" name="name" defaultValue={user?.displayName} className="w-full p-2 border rounded-md focus:outline-blue-400" readOnly/>
                             <label className="mb-2 block font-semibold">Item Name</label>
                             <input type="text" placeholder="enter item name" id="itemName" name="itemName" className="w-full p-2 border rounded-md focus:outline-blue-400" required/>
                             <label className="mb-2 block font-semibold">Subcategory</label>
@@ -85,7 +85,7 @@ const AddCraftItem = () => {
                         {/* right side */}
                         <div className="flex-1 space-y-3">
                             <label className="mb-2 block font-semibold">Email</label>
-                            <input type="text" placeholder="enter email" id="email" name="email" defaultValue={user?.email} className="w-full p-2 border rounded-md focus:outline-blue-400" required/>
+                            <input type="text" placeholder="enter email" id="email" name="email" defaultValue={user?.email} className="w-full p-2 border rounded-md focus:outline-blue-400" readOnly/>
                             <label className="mb-2 block font-semibold">Photo</label>
                             <input type="text" placeholder="photo url" id="photo" name="photo" className="w-full p-2 border rounded-md focus:outline-blue-400" required/>
                             
