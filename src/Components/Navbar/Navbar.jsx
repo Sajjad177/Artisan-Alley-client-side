@@ -2,14 +2,24 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
+import ThemeControl from "../ThemeControl/ThemeControl";
 
 
 const Navbar = () => {
+    // const [isDark, setIsDark] = useState(
+    //     JSON.parse(localStorage.getItem('isDark'))
+    // )
+
+    // useEffect(()=> {
+    //     localStorage.setItem('isDark', JSON.stringify(isDark))
+    // },[isDark])
 
     const [dropDownState, setDropDownState] = useState(false);
     const dropDownMenuRef = useRef();
 
     const {user, logOut} = useAuth()
+
+    
     
     const handelLogOut = (e) => {
         e.preventDefault()
@@ -66,6 +76,8 @@ const Navbar = () => {
                         </NavLink>
                         </>
                     }
+                    <ThemeControl></ThemeControl>
+                    {/* <input checked={isDark} onChange={() => setIsDark(!isDark)} type="checkbox" value="synthwave" className="toggle theme-controller"/> */}
                     {
                        user  ? 
                        <div className="flex items-center gap-2">

@@ -62,12 +62,12 @@ const AddCraftItem = () => {
                             <label className="mb-2 block font-semibold">Subcategory</label>
                             <select name="subcategory" id="" className="w-full p-2 border rounded-md focus:outline-blue-400" type='text' placeholder='select category'>
                                 <option> Select Category</option>
-                                <option value='Landscape_Painting'>Landscape Painting</option>
-                                <option value='Portrait_Drawing'>Portrait Drawing</option>
-                                <option value='WaterColor_Painting:'>WaterColor Painting</option>
-                                <option value='Oil_Painting'>Oil Painting</option>
-                                <option value='Charcoal_Sketching'>Charcoal Sketching</option>
-                                <option value=' Cartoon_Drawing'> Cartoon Drawing</option>
+                                <option value='Landscape Painting'>Landscape Painting</option>
+                                <option value='Portrait Drawing'>Portrait Drawing</option>
+                                <option value='WaterColor Painting:'>WaterColor Painting</option>
+                                <option value='Oil Painting'>Oil Painting</option>
+                                <option value='Charcoal Sketching'>Charcoal Sketching</option>
+                                <option value=' Cartoon Drawing'> Cartoon Drawing</option>
                             </select>
                             <label className="mb-2 block font-semibold">Customization</label>
                             <select name="customization" id="" className="w-full p-2 border rounded-md focus:outline-blue-400" type='text' placeholder='select category'>

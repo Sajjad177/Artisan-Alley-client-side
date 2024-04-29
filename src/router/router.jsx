@@ -61,7 +61,7 @@ const router = createBrowserRouter([
         {
           path:'/landscape',
           element:<Landscape></Landscape>,
-          loader:({params}) => fetch(`http://localhost:5000/landCapes/${params.subcategory}`)
+          // loader:({params}) => fetch(`http://localhost:5000/landCapes/${params.subcategory}`)
         },
         {
           path:'/portraitDrawing',

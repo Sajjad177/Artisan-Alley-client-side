@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import useArtAndCraft from "../../Hooks/useArtAndCraft";
 import { Helmet } from "react-helmet-async";
+// import { useEffect } from "react";
 
 
 const ArtAndCraft = () => {
     const { items } = useArtAndCraft()
-    console.log(items)
-    // const {_id} = items
-
+    // console.log(items._id)
     return (
         <div>
             <Helmet>
@@ -29,7 +28,6 @@ const ArtAndCraft = () => {
                     <tbody>
                         {
                             items?.map(item => 
-
                             <tr key={item._id} className="hover:bg-gray-50 border-b transition duration-300">
                                 <td className="py-4 px-4 flex justify-start">
                                     <img src={item.photo} alt="table navigate ui" className="h-16 w-16 object-cover bg-gray-300" />
@@ -37,7 +35,7 @@ const ArtAndCraft = () => {
                                 <td className="py-4 lg:px-6 border-b lg:text-xl font-medium">{item.itemName}</td>
                                 <td className="py-4 lg:px-6 px-2 border-b text-lg font-medium">{item.price}</td>
                                 <td className="py-4 px-6 border-b text-end">
-                                    <Link to={`/details`}>
+                                    <Link to={`/details/${item._id}`}>
                                         <button className="bg-blue-500 hover:scale-110 scale-100 transition-all duration-100 text-white py-2 lg:px-4 px-2 rounded-md">Details</button>
                                     </Link>
                                 </td>

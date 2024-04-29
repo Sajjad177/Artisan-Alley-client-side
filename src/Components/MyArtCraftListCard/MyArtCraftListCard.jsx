@@ -46,10 +46,10 @@ const MyArtCraftListCard = ({craftItem, craftItems, setCraftItems}) => {
     
     return (
         <div>
-            <div className='container m-auto my-10 border-2 p-5'>
-                <div className="flex gap-20 bg-base-100 shadow-xl p-10">
-                    <div className="border-2 ">
-                        <img src={photo} alt="" className="lg:w-96 md:w-96 lg:h-full rounded-lg"/>
+            <div className='container m-auto my-10 p-5'>
+                <div className="flex lg:flex-row flex-col gap-20 bg-base-100 shadow-xl p-10">
+                    <div className="">
+                        <img src={photo} alt="" className="lg:w-96 md:w-96 w-80 h-60 lg:h-full rounded-lg"/>
                     </div>
                     <div className="space-y-3">
                         <h2 className="card-title">{itemName}</h2>
@@ -73,7 +73,7 @@ const MyArtCraftListCard = ({craftItem, craftItems, setCraftItems}) => {
                                 {rating}
                             </h2>
                         </div>
-                        <div className=" mt-20">
+                        <div className="mt-20 flex lg:flex-row md:flex-row">
                             <Link to={`/update/${_id}`}>
                                 <button className="btn btn-primary">Update</button>
                             </Link>
