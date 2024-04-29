@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const MyArtCraftListCard = ({craftItem, craftItems, setCraftItems}) => {
     // console.log(craftItem)
-    const {_id, photo, itemName} = craftItem;
+    const {_id,itemName, customization, stockStatus, photo, price, rating} = craftItem;
     
        
 
@@ -31,7 +31,7 @@ const MyArtCraftListCard = ({craftItem, craftItems, setCraftItems}) => {
                     if(data.deletedCount > 0){
                         Swal.fire({
                             title: "Deleted!",
-                            text: "Your item has been deleted.",
+                            text: "Your product has been deleted.",
                             icon: "success"
                           });
                     }
@@ -47,19 +47,40 @@ const MyArtCraftListCard = ({craftItem, craftItems, setCraftItems}) => {
     return (
         <div>
             <div className='container m-auto my-10 border-2 p-5'>
-            <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img src={photo} alt="Movie" className='w-56'/></figure>
-                <div className="card-body">
-                    <h2 className="card-title">{itemName}</h2>
-                    <p>Click the button to watch on Jetflix app.</p>
-                    <div className="card-actions justify-end">
-                    <Link to={`/update/${_id}`}>
-                        <button className="btn btn-primary">Update</button>
-                    </Link>
-                    <button onClick={() => handelDelete(_id)} className="btn btn-error">Delete</button>
+                <div className="flex gap-20 bg-base-100 shadow-xl p-10">
+                    <div className="border-2 ">
+                        <img src={photo} alt="" className="lg:w-96 md:w-96 lg:h-full rounded-lg"/>
+                    </div>
+                    <div className="space-y-3">
+                        <h2 className="card-title">{itemName}</h2>
+                        <div className='flex lg:gap-5 gap-3 lg:flex-row flex-col'>
+                            <h1>
+                                <span className='text-lg font-semibold'>Customization : </span> 
+                                {customization }
+                            </h1>
+                            <h2>
+                                <span className='text-lg font-semibold'>Stock Status : </span>
+                                {stockStatus}
+                            </h2>
+                        </div>
+                        <div className='flex lg:gap-5 gap-3 lg:flex-row flex-col'>
+                            <h1>
+                                <span className='text-lg font-semibold'>Price : </span> 
+                                {price}
+                            </h1>
+                            <h2>
+                                <span className='text-lg font-semibold'>Rating : </span>
+                                {rating}
+                            </h2>
+                        </div>
+                        <div className=" mt-20">
+                            <Link to={`/update/${_id}`}>
+                                <button className="btn btn-primary">Update</button>
+                            </Link>
+                            <button onClick={() => handelDelete(_id)} className="btn btn-error ml-6">Delete</button>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     );

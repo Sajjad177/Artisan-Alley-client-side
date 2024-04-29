@@ -51,16 +51,21 @@ const Navbar = () => {
                         All Art & craft<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
                         </li>
                     </NavLink>
-                    <NavLink to='/AddCraftItem'>
-                        <li className="group flex  cursor-pointer flex-col">
-                        Add Craft Item<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
-                        </li>
-                    </NavLink>
-                    <NavLink to='/myArtCraftList'>
-                        <li className="group flex  cursor-pointer flex-col">
-                        My Art&Craft List<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
-                        </li>
-                    </NavLink>
+                    {
+                        user && 
+                        <>
+                        <NavLink to='/AddCraftItem'>
+                            <li className="group flex  cursor-pointer flex-col">
+                            Add Craft Item<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+                            </li>
+                        </NavLink>
+                        <NavLink to='/myArtCraftList'>
+                            <li className="group flex  cursor-pointer flex-col">
+                            My Art&Craft List<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+                            </li>
+                        </NavLink>
+                        </>
+                    }
                     {
                        user  ? 
                        <div className="flex items-center gap-2">
@@ -86,7 +91,7 @@ const Navbar = () => {
                     <div ref={dropDownMenuRef} onClick={() => setDropDownState(!dropDownState)} className="relative flex transition-transform md:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cursor-pointer" > <line x1="4" x2="20" y1="12" y2="12" /> <line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /> </svg>
                     {dropDownState && (
-                        <ul className=" z-10  gap-2  bg-[#393E46]  absolute right-0 top-11 flex w-[200px] flex-col  rounded-lg   text-base ">
+                        <ul className=" z-10  gap-2  bg-[#393E46]  absolute right-0 top-11 flex w-[200px] flex-col  rounded-lg text-base  ">
                         <NavLink to='/'>
                             <li className="cursor-pointer  px-6 py-2 text-white rounded-t-lg hover:bg-sky-600 ">
                                 Home
@@ -97,16 +102,21 @@ const Navbar = () => {
                                 Art & craft
                             </li>
                         </NavLink>
-                        <NavLink to='/AddCraftItem'>
-                            <li className="cursor-pointer  px-6 py-2 text-white hover:bg-sky-600 ">
-                                Add Craft Item
-                            </li>
-                        </NavLink>
-                        <NavLink to='/myArtCraftList'>
-                            <li className="cursor-pointer  px-6 py-2 text-white hover:bg-sky-600 ">
-                                My Art&Craft List
-                            </li>
-                        </NavLink>
+                        {
+                            user && 
+                            <>
+                                <NavLink to='/AddCraftItem'>
+                                    <li className="cursor-pointer  px-6 py-2 text-white hover:bg-sky-600 ">
+                                        Add Craft Item
+                                    </li>
+                                </NavLink>
+                                <NavLink to='/myArtCraftList'>
+                                    <li className="cursor-pointer  px-6 py-2 text-white hover:bg-sky-600 ">
+                                        My Art&Craft List
+                                    </li>
+                                </NavLink>
+                            </>
+                        }
                         <NavLink to='/login'>
                             <li className="cursor-pointer  px-6 py-2 text-white hover:bg-sky-600 ">
                                 Login

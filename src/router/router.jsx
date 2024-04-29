@@ -15,6 +15,7 @@ import Oilpainting from "../Pages/OilPainting/OilPainting";
 import CharcoalSketching from "../Pages/CharcoalSketching/CharcoalSketching";
 import CartoonDrawing from "../Pages/CartoonDrawing/CartoonDrawing";
 import WaterColor from "../Pages/WaterColor/WaterColor";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -47,8 +48,10 @@ const router = createBrowserRouter([
           element:<Register></Register>
         },
         {
-          path:"/details",
-          element:<Details></Details>
+          path:"/details/:id",
+          element:<PrivateRoutes>
+            <Details></Details>
+          </PrivateRoutes>
         },
         {
           path:"/update/:id",
@@ -57,7 +60,8 @@ const router = createBrowserRouter([
         },
         {
           path:'/landscape',
-          element:<Landscape></Landscape>
+          element:<Landscape></Landscape>,
+          loader:({params}) => fetch(`http://localhost:5000/landCapes/${params.subcategory}`)
         },
         {
           path:'/portraitDrawing',

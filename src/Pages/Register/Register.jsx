@@ -8,9 +8,10 @@ import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-    const {createUser,} = useAuth() 
+    const {createUser, setReload} = useAuth() 
     const navigate = useNavigate()
 
 
@@ -72,21 +73,27 @@ const Register = () => {
                     photoURL: photo
                 })
                 .then(() => {
-
+                    setReload(true)
                 })
                 .catch()
             })
-            .catch((error) => {
-                console.log(error)
+            .catch(() => {
+                Swal.fire({
+                    icon: "error",
+                    title: "You are already register"
+                  });
             })
 
     }
     return (
         <div>
+            <Helmet>
+                Artisan Alley/Register
+            </Helmet>
             <div className="w-full mx-auto lg:w-[500px] drop-shadow-lg bg-white">
             <div className="p-12 border-2">
-                <h1 className="text-4xl font-bold pb-8 text-center">Register Your Account</h1>
-                <form onSubmit={handelRegister} className ="space-y-5">
+                <h1 className="lg:text-4xl text-2xl border-b-2 border-dashed font-bold pb-8 text-center">Register Your Account</h1>
+                <form onSubmit={handelRegister} className ="space-y-5 mt-5">
                     <label htmlFor="name" className="block">Name</label>
                     <div className="relative ">
                         <input id="name" name="name" type="text" placeholder="enter your name" className="p-3 block w-full pl-10 drop-shadow-lg outline-none" required/>

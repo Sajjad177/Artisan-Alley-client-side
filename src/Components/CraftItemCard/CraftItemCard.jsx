@@ -4,24 +4,22 @@ import { Link } from 'react-router-dom';
 
 const CraftItemCard = ({item}) => {
     // console.log('from card', item)
-    const {itemName, photo} = item
+    const {_id, itemName, photo, subcategory} = item
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src={photo} alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                {itemName}
-                <div className="badge badge-secondary">NEW</div>
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                <div className="badge badge-outline">Fashion</div> 
-                <div className="badge badge-outline">Products</div>
-                </div>
+            <div className=" lg:w-96 bg-base-100 shadow-xl border-2 p-5">
+            <div>
+                <img src={photo} alt="Shoes" className='h-80' />
             </div>
-            <Link to='/details'>
-                <button className='btn  btn-secondary mb-4'>View Details</button>
+            <div className='my-5'>
+                <h2 className="mb-1 text-2xl font-semibold">
+                  Item Name :  {itemName}
+                </h2>
+                <p className="rounded-3xl text-xl">{subcategory}</p>
+            </div>
+            
+            <Link to={`/details/${_id}`}>
+                <button className='btn  btn-secondary mb-4 w-full'>View Details</button>
             </Link>
             </div>
         </div>

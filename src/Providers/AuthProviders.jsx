@@ -14,6 +14,7 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProviders = ({children}) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(false)
+    const [reload, setReload] = useState(false)
     // create user
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth , email, password)
@@ -31,12 +32,7 @@ const AuthProviders = ({children}) => {
     const googleLogin = () => {
         setLoading(true)
         signInWithPopup(auth, googleProvider)
-        .then((result) => {
-            console.log(result)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
+        
     }
 
     // Git hub login :
@@ -63,7 +59,7 @@ const AuthProviders = ({children}) => {
             unSubscribe()
         }
 
-    },[])
+    },[reload])
 
     const authInfo = {
         createUser,
@@ -73,6 +69,7 @@ const AuthProviders = ({children}) => {
         user,
         loading,
         logOut,
+        setReload
     }
 
     return (

@@ -7,7 +7,7 @@ import MyArtCraftListCard from "../../Components/MyArtCraftListCard/MyArtCraftLi
 const MyArtCraftList = () => {
     
     const {user} = useAuth();
-    // console.log(user)
+    console.log(user)
     const [craftItems, setCraftItems] = useState([])
 
     useEffect(() => {
@@ -22,7 +22,7 @@ const MyArtCraftList = () => {
     }, [user])
 
     return (
-        <div>
+        <div className="">
             {
                 craftItems?.map(craftItem => 
                 <MyArtCraftListCard 
