@@ -90,7 +90,7 @@ const AddCraftItem = () => {
                             <input type="text" placeholder="photo url" id="photo" name="photo" className="w-full p-2 border rounded-md focus:outline-blue-400" required/>
                             
                             <label className="mb-2 block font-semibold">Time</label>
-                            <input type="time" min='9:00' max='12:00' placeholder="time..." id="time" name="time" className="w-full p-2 border rounded-md focus:outline-blue-400" required/>
+                            <input type="text"  placeholder="time..." id="time" name="time" className="w-full p-2 border rounded-md focus:outline-blue-400" required/>
                             <label className="mb-2 block font-semibold">Price</label>
                             <input type="text" placeholder="enter price" id="price" name="price" className="w-full p-2 border rounded-md focus:outline-blue-400" required/>
                             <label className="mb-2 block font-semibold">Rating</label>

@@ -13,6 +13,7 @@ import oil from "../../assets/image/oil.jpg"
 import Cartoon from "../../assets/image/cartoon.jpg"
 import Blogs from "../../Components/Blogs/Blogs";
 import MostPopulerPic from "../../Components/MostPopulerPic/MostPopulerPic";
+import { Cursor, Typewriter, useTypewriter } from "react-simple-typewriter";
 // import { useEffect, useState } from "react";
 
 const Home = () => {
@@ -28,6 +29,11 @@ const Home = () => {
     //         })
     // },[])
 
+    const [text] = useTypewriter({
+        words: ["Craft", "Items"],
+        loop: {}
+      })
+
     if(isLoading){
        return <div className="flex items-center justify-center">
             <div className="w-20 h-20  border-l-2 border-green-500 rounded-full flex justify-center items-center animate-[spin_1.8s_linear_infinite]"><div className="w-16 h-16  border-b-2 border-indigo-500 rounded-full flex justify-center items-center animate-[spin_1.8s_linear_infinite]"><div className="w-10 h-10  border-r-2  border-sky-500 rounded-full animate-[spin_1.8s_linear_infinite]"></div></div></div>
@@ -35,6 +41,8 @@ const Home = () => {
         </div>
     }
 
+    
+    
     
 
     return (
@@ -47,7 +55,11 @@ const Home = () => {
             <div className="container m-auto">
                 <Banner></Banner>
                 <div className="mb-14 ">
-                    <h1 className="lg:text-5xl text-3xl font-bold border-b-2 border-dashed pb-10 text-center">Craft Items</h1>
+                    <h1 className="lg:text-5xl text-3xl font-bold border-b-2 border-dashed pb-10 text-center">
+                        
+                         {text} 
+                        <span><Cursor></Cursor></span> 
+                    </h1>
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-10 gap-5 mt-10 ">
                         {
                             sliceItem?.map((item) => 

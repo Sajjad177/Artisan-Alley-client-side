@@ -28,7 +28,7 @@ const Details = () => {
                 <title>Artisan Alley/ Details : {id}</title>
             </Helmet>
             <div className="container m-auto">
-            <div className="border border-orange-50 my-10 lg:p-10 p-5 flex lg:flex-row  flex-col lg:gap-20 gap-10 rounded-lg shadow-lg">
+            <div className="border border-orange-50 my-36 lg:p-10 p-5 flex lg:flex-row  flex-col lg:gap-20 gap-10 rounded-lg shadow-lg">
                 <div className="">
                     <img src={photo} alt="" className="lg:w-96 md:w-96 lg:h-full rounded-lg"/>
                 </div>
