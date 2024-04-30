@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import ThemeControl from "../ThemeControl/ThemeControl";
@@ -77,28 +77,24 @@ const Navbar = () => {
                         </>
                     }
                     <ThemeControl></ThemeControl>
-                    {/* <input checked={isDark} onChange={() => setIsDark(!isDark)} type="checkbox" value="synthwave" className="toggle theme-controller"/> */}
+
                     {
-                       user  ? 
-                       <div className="flex items-center gap-2">
-                            <div>
-                                <div tabIndex={0} role="button" className="tooltip tooltip-bottom" data-tip ={`${user.displayName}`}>
-                                    <img className="size-[70px] bg-slate-500 object-cover rounded-full" src={`${user?.photoURL}`} alt="avatar navigate ui" />
+                        user ? 
+                        <div className="flex items-center lg:gap-5 gap-2">
+                            <div tabIndex={0} role="button" className="tooltip tooltip-bottom" data-tip={`${user.displayName}`}>
+                                <div className="">
+                                    <img className="w-16 h-16 rounded-full border-2" src={`${user.photoURL}`} alt="" />
                                 </div>
                             </div>
-                            <li onClick={handelLogOut} className="group flex  cursor-pointer flex-col">
-                                logOut
-                            <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
-                            </li>
-                       </div>
-                        :
-                    <NavLink to='/login'>
-                        <li className="group flex  cursor-pointer flex-col">
-                        Login
-                        <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
-                        </li>
-                    </NavLink>
+                                <button onClick={handelLogOut} className="btn bg-sky-500 border-none">Sign Out</button> 
+                        </div>
+                        
+                         :
+
+                        <Link to='/login'><button className="btn text-lg bg-sky-500  border-none">login</button></Link>
                     }
+
+
                     </ul>
                     <div ref={dropDownMenuRef} onClick={() => setDropDownState(!dropDownState)} className="relative flex transition-transform md:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cursor-pointer" > <line x1="4" x2="20" y1="12" y2="12" /> <line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /> </svg>
