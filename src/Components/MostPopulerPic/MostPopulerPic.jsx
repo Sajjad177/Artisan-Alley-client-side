@@ -9,7 +9,7 @@ const MostPopulerPic = () => {
         <div>
             <div className="my-10">
                     <h1 className="text-5xl text-center font-bold my-10"><Slide triggerOnce>
-                    <p>Most Wander Picture</p>
+                    <p>Most Popular Picture</p>
                     </Slide></h1>
                 <section className="py-6 bg-gray-300">
                     <div className="container flex flex-col justify-center p-4 mx-auto">
