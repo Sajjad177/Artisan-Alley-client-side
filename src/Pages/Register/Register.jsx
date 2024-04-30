@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import { Helmet } from "react-helmet-async";
+import { Fade } from "react-awesome-reveal";
 
 const Register = () => {
     const {createUser, setReload} = useAuth() 
@@ -92,7 +93,11 @@ const Register = () => {
             </Helmet>
             <div className="w-full mx-auto lg:w-[500px] drop-shadow-lg bg-white">
             <div className="p-12 border-2">
-                <h1 className="lg:text-4xl text-2xl border-b-2 border-dashed font-bold pb-8 text-center">Register Your Account</h1>
+                <h1 className="lg:text-4xl text-2xl border-b-2 border-dashed font-bold pb-8 text-center">
+                    <Fade cascade damping={0.1}>
+                         Register Your Account
+                    </Fade>
+                </h1>
                 <form onSubmit={handelRegister} className ="space-y-5 mt-5">
                     <label htmlFor="name" className="block">Name</label>
                     <div className="relative ">

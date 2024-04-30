@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 
 
 const Login = () => {
@@ -66,7 +66,11 @@ const Login = () => {
                         <div className="absolute -right-7 top-[50%] h-14 w-14 -translate-y-1/2 rounded-full bg-gradient-to-br from-white via-[#9eb6f8] to-[#6585dd] transition-all"></div>
                         <div className="absolute left-[50%] top-[22%] h-24 w-24 -translate-x-1/2 rounded-full  bg-gradient-to-br from-white via-[#9eb6f8] to-[#6585dd]"></div>
                         <div className="lg:space-y-2 space-y-0 lg:mt-0 mt-10  text-center">
-                            <h2 className="lg:text-4xl text-2xl font-medium text-white/80 "></h2>
+                            <h2 className="lg:text-4xl text-2xl font-medium text-white/80">
+                                <Slide>
+                                    <span>Welcome Back</span>
+                                </Slide>
+                            </h2>
                             <p className="animate-pulse text-lg text-white/60">Please Enter You Information</p>
                         </div>
                     </div>
