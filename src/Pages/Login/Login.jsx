@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import { Fade } from "react-awesome-reveal";
 
 
 const Login = () => {
@@ -65,14 +66,17 @@ const Login = () => {
                         <div className="absolute -right-7 top-[50%] h-14 w-14 -translate-y-1/2 rounded-full bg-gradient-to-br from-white via-[#9eb6f8] to-[#6585dd] transition-all"></div>
                         <div className="absolute left-[50%] top-[22%] h-24 w-24 -translate-x-1/2 rounded-full  bg-gradient-to-br from-white via-[#9eb6f8] to-[#6585dd]"></div>
                         <div className="lg:space-y-2 space-y-0 lg:mt-0 mt-10  text-center">
-                            <h2 className="lg:text-4xl text-2xl font-medium text-white/80 ">Welcome Back</h2>
+                            <h2 className="lg:text-4xl text-2xl font-medium text-white/80 "></h2>
                             <p className="animate-pulse text-lg text-white/60">Please Enter You Information</p>
                         </div>
                     </div>
                     {/* input side  */}
                     <div className="flex w-full flex-col justify-center bg-white py-10 lg:w-[60%] ">
-                        <h2 className="py
-                        -8 text-center text-3xl font-bold text-[#8EA7E9]">Login Here</h2>
+                        <h2 className="py-8 text-center text-3xl font-bold text-[#8EA7E9]">
+                        <Fade cascade damping={0.1}>
+                            Login Here
+                        </Fade>
+                        </h2>
                         <form onSubmit={handelLogin} className="flex  w-full flex-col items-center justify-center gap-4">
                             <input className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]" type="email" placeholder="Email" name="email"/>
                             <input className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]" type="password" placeholder="Password" name="password"/>

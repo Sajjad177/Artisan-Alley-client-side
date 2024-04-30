@@ -14,6 +14,7 @@ import Cartoon from "../../assets/image/cartoon.jpg"
 import Blogs from "../../Components/Blogs/Blogs";
 import MostPopulerPic from "../../Components/MostPopulerPic/MostPopulerPic";
 import { Cursor, Typewriter, useTypewriter } from "react-simple-typewriter";
+import { Slide } from "react-awesome-reveal";
 // import { useEffect, useState } from "react";
 
 const Home = () => {
@@ -29,10 +30,6 @@ const Home = () => {
     //         })
     // },[])
 
-    const [text] = useTypewriter({
-        words: ["Craft", "Items"],
-        loop: {}
-      })
 
     if(isLoading){
        return <div className="flex items-center justify-center">
@@ -56,9 +53,9 @@ const Home = () => {
                 <Banner></Banner>
                 <div className="mb-14 ">
                     <h1 className="lg:text-5xl text-3xl font-bold border-b-2 border-dashed pb-10 text-center">
-                        
-                         {text} 
-                        <span><Cursor></Cursor></span> 
+                    <Slide >
+                        <p>I will animate only the first time you see me</p>
+                    </Slide>
                     </h1>
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-10 gap-5 mt-10 ">
                         {

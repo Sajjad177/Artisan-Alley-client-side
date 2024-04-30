@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import useAuth from "../../Hooks/useAuth";
+import { Fade } from "react-awesome-reveal";
 
 const AddCraftItem = () => {
 
@@ -50,7 +51,11 @@ const AddCraftItem = () => {
         <div className="container m-auto">
             <div className="shadow-lg p-5 border rounded-md">
                 <div className="my-6 text-center pb-5">
-                    <h1 className="text-2xl lg:text-4xl font-bold">Add Craft Item</h1>
+                    <h1 className="text-2xl lg:text-4xl font-bold">
+                        <Fade cascade damping={0.1}>
+                            Add Craft Item
+                        </Fade>
+                    </h1>
                 </div>
                 <form onSubmit={handelAddItem}>
                     <div className="flex gap-8">

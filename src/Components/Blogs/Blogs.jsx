@@ -1,3 +1,4 @@
+import { Slide } from "react-awesome-reveal";
 import blogImage1 from "../../assets/image/blog-image-1.jpg"
 import blogImage2 from "../../assets/image/blog-image-2.jpg"
 import blogImage3 from "../../assets/image/blog-image-3.jpg"
@@ -10,7 +11,11 @@ const Blogs = () => {
                 <section className="py-6 sm:py-12 bg-gray-200">
                     <div className="container p-6 mx-auto space-y-8">
                         <div className="space-y-2 text-center">
-                            <h2 className="text-3xl font-bold">Art And Craft Blogs</h2>
+                            <h2 className="text-3xl lg:text-5xl font-bold">
+                                <Slide cascade>
+                                    <p>I am an animated text</p>
+                                </Slide>
+                            </h2>
                             <p className="font-serif text-sm text-gray-400">Read the Blog learn more about art</p>
                         </div>
                         <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
