@@ -13,22 +13,11 @@ import oil from "../../assets/image/oil.jpg"
 import Cartoon from "../../assets/image/cartoon.jpg"
 import Blogs from "../../Components/Blogs/Blogs";
 import MostPopulerPic from "../../Components/MostPopulerPic/MostPopulerPic";
-import { Cursor, Typewriter, useTypewriter } from "react-simple-typewriter";
 import { Slide } from "react-awesome-reveal";
 // import { useEffect, useState } from "react";
 
 const Home = () => {
-    // const [subCategories, setSubCategories] = useState([]);
     const {isLoading, sliceItem} = useArtAndCraft()
-
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/subCategory',)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data)
-    //             setSubCategories(data);
-    //         })
-    // },[])
 
 
     if(isLoading){
@@ -38,9 +27,6 @@ const Home = () => {
         </div>
     }
 
-    
-    
-    
 
     return (
         <div>
@@ -54,7 +40,7 @@ const Home = () => {
                 <div className="mb-14 ">
                     <h1 className="lg:text-5xl text-3xl font-bold border-b-2 border-dashed pb-10 text-center">
                     <Slide >
-                        <p>I will animate only the first time you see me</p>
+                        <p>Craft Items</p>
                     </Slide>
                     </h1>
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-10 gap-5 mt-10 ">
