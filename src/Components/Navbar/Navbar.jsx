@@ -6,13 +6,6 @@ import ThemeControl from "../ThemeControl/ThemeControl";
 
 
 const Navbar = () => {
-    // const [isDark, setIsDark] = useState(
-    //     JSON.parse(localStorage.getItem('isDark'))
-    // )
-
-    // useEffect(()=> {
-    //     localStorage.setItem('isDark', JSON.stringify(isDark))
-    // },[isDark])
 
     const [dropDownState, setDropDownState] = useState(false);
     const dropDownMenuRef = useRef();
@@ -48,16 +41,16 @@ const Navbar = () => {
         <div> 
                <nav className="flex items-center justify-between bg-[#393E46] px-4 py-2 text-white mb-10">
                     <div className="scale-100 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold text-white transition-all duration-200 hover:scale-110">
-                    <h2>Artisan Alley</h2>
+                    <h2 className="text-sm lg:text-lg">Artisan Alley</h2>
                     </div>
-                    <ul className="hidden items-center justify-between gap-10 md:flex">
+                    <ul className=" lg:flex hidden  justify-between gap-10 ">
                     <NavLink to='/'>
                         <li className="group flex  cursor-pointer flex-col">
                             Home<span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
                         </li>
                     </NavLink>
                     <NavLink to='/artAndCraft'>
-                        <li className="group flex  cursor-pointer flex-col">
+                        <li className="group flex cursor-pointer flex-col text-sm lg:text-lg">
                         All Art & craft<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
                         </li>
                     </NavLink>
@@ -71,7 +64,7 @@ const Navbar = () => {
                         </NavLink>
                         <NavLink to='/myArtCraftList'>
                             <li className="group flex  cursor-pointer flex-col">
-                            My Art&Craft List<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+                            My List<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
                             </li>
                         </NavLink>
                         </>
@@ -80,13 +73,13 @@ const Navbar = () => {
 
                     {
                         user ? 
-                        <div className="flex items-center lg:gap-5 gap-2">
+                        <div className="flex items-center justify-end   lg:gap-5 gap-0 ">
                             <div tabIndex={0} role="button" className="tooltip tooltip-bottom" data-tip={`${user.displayName}`}>
                                 <div className="">
-                                    <img className="w-16 h-16 rounded-full border-2" src={`${user.photoURL}`} alt="" />
+                                    <img className="w-12 h-12 rounded-full border-2" src={`${user.photoURL}`} alt="" />
                                 </div>
                             </div>
-                                <button onClick={handelLogOut} className="btn bg-sky-500 border-none">Sign Out</button> 
+                                <button onClick={handelLogOut} className="btn bg-sky-500 border-none text-sm">Sign Out</button> 
                         </div>
                         
                          :
@@ -96,7 +89,7 @@ const Navbar = () => {
 
 
                     </ul>
-                    <div ref={dropDownMenuRef} onClick={() => setDropDownState(!dropDownState)} className="relative flex transition-transform md:hidden">
+                    <div ref={dropDownMenuRef} onClick={() => setDropDownState(!dropDownState)} className="relative lg:hidden flex transition-transform">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cursor-pointer" > <line x1="4" x2="20" y1="12" y2="12" /> <line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /> </svg>
                     {dropDownState && (
                         <ul className="gap-2  bg-[#393E46]  absolute right-0 top-11 flex w-[200px] flex-col rounded-lg text-base">
@@ -125,11 +118,22 @@ const Navbar = () => {
                                 </NavLink>
                             </>
                         }
-                        <NavLink to='/login'>
-                            <li className="cursor-pointer  px-6 py-2 text-white hover:bg-sky-600 ">
-                                Login
-                            </li>
-                        </NavLink>
+                        {
+                            user ? 
+                            <div className="flex lg:flex-row flex-col items-center lg:gap-5 gap-2">
+                                <div tabIndex={0} role="button" className="tooltip tooltip-bottom" data-tip={`${user.displayName}`}>
+                                    <div className="">
+                                        <img className="w-16 h-16 rounded-full border-2" src={`${user.photoURL}`} alt="" />
+                                    </div>
+                                </div>
+                                    <button onClick={handelLogOut} className="btn bg-sky-500 border-none">Sign Out</button> 
+                            </div>
+                            
+                            :
+
+                            <Link to='/login'><button className="btn text-lg bg-sky-500  border-none">login</button></Link>
+
+                        }
                         </ul>
                     )}
                     </div>

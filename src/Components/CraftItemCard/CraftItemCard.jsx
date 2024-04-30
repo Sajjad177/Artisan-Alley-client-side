@@ -9,7 +9,7 @@ const CraftItemCard = ({item}) => {
         <div>
             <div className=" lg:w-96 bg-base-100 shadow-xl border-2 p-5">
             <div>
-                <img src={photo} alt="Shoes" className='h-80' />
+                <img src={photo} alt="Shoes" className='h-80 w-full' />
             </div>
             <div className='my-5'>
                 <h2 className="mb-1 text-2xl font-semibold">
