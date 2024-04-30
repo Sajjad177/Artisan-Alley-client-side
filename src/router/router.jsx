@@ -18,73 +18,78 @@ import WaterColor from "../Pages/WaterColor/WaterColor";
 import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element:<Root></Root>,
-      errorElement:<ErrorPage></ErrorPage>,
-      children:[
-        {
-          path:"/",
-          element:<Home></Home>
-        },
-        {
-          path:"/artAndCraft",
-          element:<ArtAndCraft></ArtAndCraft>
-        },
-        {
-          path:"/addCraftItem",
-          element:<AddCraftItem></AddCraftItem>
-        },
-        {
-          path:"/myArtCraftList",
-          element:<MyArtCraftList></MyArtCraftList>
-        },
-        {
-          path:"/login",
-          element:<Login></Login>
-        },
-        {
-          path:"/register",
-          element:<Register></Register>
-        },
-        {
-          path:"/details/:id",
-          element:<PrivateRoutes>
+  {
+    path: "/",
+    element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/artAndCraft",
+        element: <ArtAndCraft></ArtAndCraft>,
+      },
+      {
+        path: "/addCraftItem",
+        element: <AddCraftItem></AddCraftItem>,
+      },
+      {
+        path: "/myArtCraftList",
+        element: <MyArtCraftList></MyArtCraftList>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/details/:id",
+        element: (
+          <PrivateRoutes>
             <Details></Details>
           </PrivateRoutes>
-        },
-        {
-          path:"/update/:id",
-          element:<UpdateItem></UpdateItem>,
-          loader :({params}) => fetch(`http://localhost:5000/artAndCraft/${params.id}`)
-        },
-        {
-          path:'/landscape',
-          element:<Landscape></Landscape>,
-          // loader:({params}) => fetch(`http://localhost:5000/landCapes/${params.subcategory}`)
-        },
-        {
-          path:'/portraitDrawing',
-          element:<PortraitDrawing></PortraitDrawing>
-        },
-        {
-          path:'/waterColor',
-          element:<WaterColor></WaterColor>
-        },
-        {
-          path:'/oilPainting',
-          element:<Oilpainting></Oilpainting>
-        },
-        {
-          path:'/charcoalSketching',
-          element:<CharcoalSketching></CharcoalSketching>
-        },
-        {
-          path:'/cartoonDrawing',
-          element:<CartoonDrawing></CartoonDrawing>
-        },
-      ],
-    },
-  ]);
+        ),
+      },
+      {
+        path: "/update/:id",
+        element: <UpdateItem></UpdateItem>,
+        loader: ({ params }) =>
+          fetch(
+            `https://assigenment-server-ten.vercel.app/artAndCraft/${params.id}`
+          ),
+      },
+      {
+        path: "/landscape",
+        element: <Landscape></Landscape>,
+        // loader:({params}) => fetch(`https://assigenment-server-ten.vercel.app/landCapes/${params.subcategory}`)
+      },
+      {
+        path: "/portraitDrawing",
+        element: <PortraitDrawing></PortraitDrawing>,
+      },
+      {
+        path: "/waterColor",
+        element: <WaterColor></WaterColor>,
+      },
+      {
+        path: "/oilPainting",
+        element: <Oilpainting></Oilpainting>,
+      },
+      {
+        path: "/charcoalSketching",
+        element: <CharcoalSketching></CharcoalSketching>,
+      },
+      {
+        path: "/cartoonDrawing",
+        element: <CartoonDrawing></CartoonDrawing>,
+      },
+    ],
+  },
+]);
 
-  export default router;
+export default router;
