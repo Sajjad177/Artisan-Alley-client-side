@@ -21,7 +21,7 @@ const UpdateItem = () => {
         const description = form.description.value
 
         const updateItems = {itemName, subcategory, customization, stockStatus, photo, time, price, rating, description}
-        // console.log(updateItems)
+        
 
         fetch(`http://localhost:5000/artAndCraft/${_id}`, {
             method:'PUT',

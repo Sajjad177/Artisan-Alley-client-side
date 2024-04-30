@@ -3,8 +3,6 @@ import Banner from "../../Components/Banner/Banner";
 import CraftItemCard from "../../Components/CraftItemCard/CraftItemCard";
 import useArtAndCraft from "../../Hooks/useArtAndCraft";
 import { Helmet } from "react-helmet-async";
-
-
 import landscape from "../../assets/image/landscape.jpg"
 import Charcoal from "../../assets/image/landscape.jpg"
 import portraitDrawing from "../../assets/image/charcoal.jpg"
@@ -14,7 +12,6 @@ import Cartoon from "../../assets/image/cartoon.jpg"
 import Blogs from "../../Components/Blogs/Blogs";
 import MostPopulerPic from "../../Components/MostPopulerPic/MostPopulerPic";
 import { Slide } from "react-awesome-reveal";
-// import { useEffect, useState } from "react";
 
 const Home = () => {
     const {isLoading, sliceItem} = useArtAndCraft()

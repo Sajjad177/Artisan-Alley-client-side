@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 
 const MyArtCraftListCard = ({craftItem, craftItems, setCraftItems}) => {
-    // console.log(craftItem)
     const {_id,itemName, customization, stockStatus, photo, price, rating} = craftItem;
     
        

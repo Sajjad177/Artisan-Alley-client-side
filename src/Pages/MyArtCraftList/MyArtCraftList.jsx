@@ -7,9 +7,7 @@ import MyArtCraftListCard from "../../Components/MyArtCraftListCard/MyArtCraftLi
 const MyArtCraftList = () => {
     
     const {user} = useAuth();
-    // console.log(user)
     const [craftItems, setCraftItems] = useState([])
-    // const [filterItems, setFilterItems] = useState(craftItems)
 
     useEffect(() => {
         fetch(`http://localhost:5000/myCraftItem/${user?.email}`)
@@ -21,11 +19,6 @@ const MyArtCraftList = () => {
 
 
     }, [user])
-
-    // const 
-    // console.log(filterItems)
-
-    
 
 
     return (

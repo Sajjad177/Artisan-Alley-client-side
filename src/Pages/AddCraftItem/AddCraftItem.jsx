@@ -22,7 +22,7 @@ const AddCraftItem = () => {
         const description = form.description.value
 
         const addItems = {name, itemName, subcategory, customization, stockStatus, email, photo, time, price, rating, description} 
-        // console.log(addItems)
+        
 
         fetch('http://localhost:5000/artAndCraft',{
             method:'POST',

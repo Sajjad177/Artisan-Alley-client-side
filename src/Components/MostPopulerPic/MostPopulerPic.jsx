@@ -9,8 +9,8 @@ const MostPopulerPic = () => {
         <div>
             <div className="my-10">
                     <h1 className="text-5xl text-center font-bold my-10"><Slide triggerOnce>
-  <p>I will animate only the first time you see me</p>
-</Slide></h1>
+                    <p>Most Wander Picture</p>
+                    </Slide></h1>
                 <section className="py-6 bg-gray-300">
                     <div className="container flex flex-col justify-center p-4 mx-auto">
                         <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
