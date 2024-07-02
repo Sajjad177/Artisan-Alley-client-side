@@ -33,7 +33,7 @@
 - **Frontend:** HTML, CSS, JavaScript, React
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
-- **Authentication:** JWT (JSON Web Tokens)
+- **Authentication:** JWT
 <br/>
 
 ## How to Clone and Run the Project Locally : 
