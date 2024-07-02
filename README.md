@@ -56,6 +56,24 @@
      ```
      Replace `your_jwt_secret_key_here` with your actual keys.
 
+4. **Firebase setup:**
+   - In your client side configure environment variables by creating a `.env.local` file in the root directory. Add the following variables:
+     ```plaintext
+       VITE_APIKEY
+       VITE_AUTHDOMAIN
+       VITE_PROJECTID
+       VITE_STORAGEBUCKET
+       VITE_MESSAGINGSENDERID
+       VITE_APPID
+     ```
+     Replace `VITE_API_URL` add your server url example `VITE_API_URL='http://localhost:5000'` .
+
+
+
+
+
+     
+
 
 
 
