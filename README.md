@@ -12,3 +12,17 @@
     Problem Solved: Website acts as an online market place.  Easily supports your skills, browsing and small business.
   </li>
 </ul>
+<br/>
+
+<h2> Features : </h2>
+<ul>
+  <h3>Responsive Design : </h3>
+  <li>Fully responsive layout that adapts to different screen sizes and devices.</li>
+  <li>Optimized for mobile, tablet, and desktop viewing.</li>
+ 
+  
+  <h3>Interactive Gallery :</h3>
+  <li>Dynamic and user-friendly interface for browsing various art and craft items.</li>
+  <li>High-quality images and view details of each item.</li>
+  
+</ul>
