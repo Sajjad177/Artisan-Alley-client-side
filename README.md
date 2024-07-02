@@ -24,5 +24,8 @@
   <h3>Interactive Gallery :</h3>
   <li>Dynamic and user-friendly interface for browsing various art and craft items.</li>
   <li>High-quality images and view details of each item.</li>
-  
+
+  <h3>User Authentication :</h3>
+  <li>User-friendly login and registration system.</li>
+  <li>User can easily add and view his art and can easily edit and delete..</li>
 </ul>
