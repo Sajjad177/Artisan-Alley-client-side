@@ -47,6 +47,14 @@
      ```bash
      npm install
      ```
+3. **Environment setup:**
+   - In your server side configure environment variables by creating a `.env` file in the root directory. Add the following variables:
+     ```plaintext
+     PORT=3000
+     MONGODB_URI=mongodb://localhost:27017/art_and_craft_db
+     JWT_SECRET=your_jwt_secret_key_here
+     ```
+     Replace `your_jwt_secret_key_here` with your actual keys.
 
 
 
