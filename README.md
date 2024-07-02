@@ -37,8 +37,16 @@
 <br/>
 
 ## How to Clone and Run the Project Locally : 
-- **Clone the repository** : First you need to clone client and server side. Open your window tarminal and type git clone and paste the URL : git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-
+1. **Clone the repository:**
+   - First, you need to clone the **client** and **server side**. Open your terminal and type:
+     ```bash
+     git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+     ```
+2. **Open files in VS Code:**
+   - After opening the **client-side** and **server-side** files in VS Code, install npm dependencies both file:
+     ```bash
+     npm install
+     ```
 
 
 
