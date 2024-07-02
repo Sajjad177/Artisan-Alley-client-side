@@ -66,10 +66,14 @@
        VITE_MESSAGINGSENDERID
        VITE_APPID
      ```
-     Replace `VITE_API_URL` add your server url example `VITE_API_URL='http://localhost:5000'` .
+     Replace `VITE_API_URL` add your server url example `VITE_API_URL='http://localhost:3000'` .
 
+5. **Access the server :**
+   - run code is `nodemon index.js ` or `npm run dev` and also check which file are you now. 
+   - Open your web browser and navigate to `http://localhost:3000` to view the application locally.
 
-
+7. **Run local :**
+   - Open your vsCode tarminal and check which file are you. Go your client file and run code `npm run dev` then client side run in local.
 
 
      
