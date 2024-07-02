@@ -14,15 +14,15 @@
 
 ## 🌟 Features
 
-### Responsive Design
+### Responsive Design :
 - **Fully responsive layout** that adapts to different screen sizes and devices.
 - **Optimized for mobile, tablet, and desktop** viewing, ensuring a seamless experience across all platforms.
 
-### Interactive Gallery
+### Interactive Gallery :
 - **Dynamic and user-friendly interface** for browsing various art and craft items.
 - **High-quality images** and detailed views of each item, enhancing the shopping experience.
 
-### User Authentication
+### User Authentication :
 - **User-friendly login and registration system** for a personalized experience.
 - Users can **easily add, view, edit, and delete** their own art pieces.
 
