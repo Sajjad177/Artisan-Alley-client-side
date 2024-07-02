@@ -29,3 +29,11 @@
   <li>User-friendly login and registration system.</li>
   <li>User can easily add and view his art and can easily edit and delete..</li>
 </ul>
+<br/>
+<h2> Technology Used : </h2>
+<ul>
+  <li>Frontend: HTML, CSS, JavaScript, React</li>
+  <li>Backend: Node.js, Express.js</li>
+  <li>Database: MongoDB</li>
+  <li>Authentication: JWT (JSON Web Tokens)</li>
+</ul>
