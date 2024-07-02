@@ -2,9 +2,7 @@
 
 ### 🌐 [Live link to Artisan Alley](https://assignment-10-ea7c5.web.app) 🌐
 
-Access the live version of Artisan Alley to explore a vibrant marketplace for handmade crafts, showcasing the creativity and skill of various artists and crafters. Click the link above to see the website in action!
-
----
+<br/>
 
 ## 📜 Project Overview :
 
