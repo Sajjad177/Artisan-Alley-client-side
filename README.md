@@ -1,8 +1,14 @@
-# React + Vite
+# Artisan Alley
+### Live link : https://assignment-10-ea7c5.web.app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br/>
+<h2>Project Overview : </h2>
+<ul>
+  <li>
+    Project Concept : This art and craft website serves as a digital platform for showcasing and selling handmade crafts. It 
+    provides an interactive and visually appealing way for artists and crafters to display their work.
+  </li>
+  <li>
+    Problem Solved: Website acts as an online market place.  Easily supports your skills, browsing and small business.
+  </li>
+</ul>
