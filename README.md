@@ -43,12 +43,10 @@
      git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
      ```
 2. **Open files in VS Code:**
-   - After opening the **client-side** and **server-side** files in VS Code, install npm dependencies:
+   - After opening the **client-side** files in VS Code, install npm dependencies:
      ```bash
      npm install
      ```
-
-
 3. **Firebase setup:**
    - In your client side configure environment variables by creating a `.env.local` file in the root directory. Add the following variables:
      ```plaintext
